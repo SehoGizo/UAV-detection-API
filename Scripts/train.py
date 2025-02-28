@@ -1,13 +1,15 @@
 from ultralytics import YOLO
 
 # YOLOv8 modelini yükle
-model = YOLO("yolov8n.pt")  # Küçük ve hızlı versiyon
-
+model = YOLO("yolov8n.pt")
 # Modeli eğit
-model.train(data="C:/Coding/Projects/UAV-Detection/dataset_txt/data.yaml",
-            epochs=50, batch=8, imgsz=640)
+if __name__ == "__main__":
+    model.train(data="drone_dataset_yolo/dataset_txt/data.yaml",
+                epochs=100,
+                batch=32,
+                imgsz=640,
+                optimizer="Adam",
+                device="cuda")  # GPU kullanımı için "cuda", CPU için "cpu" yaz
 
-# Eğitilmiş modeli kaydet
-model_path = "C:/Coding/Projects/UAV-Detection/models/uav_detection_model.pt"
-model.export(format="torchscript")
-print(f"✅ Model kaydedildi: {model_path}")
+# Eğitilen modeli kaydet
+model.export(format="onnx")  # ONNX formatında kaydetmek opsiyoneldir
