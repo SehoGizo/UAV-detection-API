@@ -2,7 +2,7 @@ import os
 import shutil
 import random
 
-# Gerekli klasörleri oluştur
+# Gerekli klasörler
 SOURCE_DIR = "C:/Coding/Projects/UAV-Detection/drone_dataset_yolo/dataset_txt"
 os.makedirs(f"{SOURCE_DIR}/images/train", exist_ok=True)
 os.makedirs(f"{SOURCE_DIR}/images/val", exist_ok=True)
@@ -27,4 +27,4 @@ for i, file in enumerate(image_files):
         shutil.move(img_path, f"{SOURCE_DIR}/images/val/")
         shutil.move(txt_path, f"{SOURCE_DIR}/labels/val/")
 
-print("✅ Veri seti başarıyla düzenlendi ve eğitim için ayrıldı!")
+print("Data set successfully organized and seperated the data for learning.")
