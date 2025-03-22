@@ -1,0 +1,54 @@
+# 🔹 Sanal ortam ve bağımlılık dosyaları
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+Pipfile
+Pipfile.lock
+poetry.lock
+env/
+
+# 🔹 Geliştirme ve sistem dosyaları
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+
+# 🔹 Git ve IDE dosyaları
+.git/
+.gitignore
+.vscode/
+.idea/
+*.iml
+
+# 🔹 Dataset ve büyük dosyalar
+drone_dataset_yolo/  # Eğer dataset'ini Docker içine almak istemiyorsan
+models/
+#runs/
+!runs/detect/train10/weights/best.pt  # 🔥 Sadece eğittiğin modeli dahil et
+
+# 🔹 Sonuç dosyaları ve raporlar
+*.csv
+*.json
+*.xml
+*.yaml
+*.yml
+*.h5
+*.onnx  # Eğer ONNX modelini kullanmıyorsan
+
+# 🔹 Medya ve büyük dosyalar
+*.mp4
+*.avi
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# 🔹 Docker'ın ihtiyacı olmayan dosyalar
+docker-compose.yml
+Dockerfile~

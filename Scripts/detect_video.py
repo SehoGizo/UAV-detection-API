@@ -2,10 +2,10 @@ from ultralytics import YOLO
 import cv2
 
 # Eğitilmiş modeli yükle
-model = YOLO("runs\\detect\\train10\\weights\\best.pt")
+model = YOLO("../runs/detect/train10/weights/best.pt")
 
-# ✅ Video kaynağını belirle
-video_path = "istockphoto-1810266408-640_adpp_is.mp4"  # Buraya test etmek istediğin video yolunu gir
+# Video kaynağını belirle
+video_path = "../istockphoto-1810266408-640_adpp_is.mp4"  # Buraya test etmek istediğin video yolunu gir
 cap = cv2.VideoCapture(video_path)
 
 while cap.isOpened():

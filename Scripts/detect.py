@@ -5,10 +5,10 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 # Modeli yükle
-model = YOLO("runs\\detect\\train10\\weights\\best.pt")
+model = YOLO("../runs/detect/train10/weights/best.pt")
 
 # Görüntüyü oku
-image_path = "drone_dataset_yolo\\dataset_txt\\images\\train_augmented\\0262.jpg"
+image_path = "../drone_dataset_yolo/dataset_txt/images/train_augmented/0262.jpg"
 image = cv2.imread(image_path)
 
 # Modeli görüntü üzerinde çalıştır

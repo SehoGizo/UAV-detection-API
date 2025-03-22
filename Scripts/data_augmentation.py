@@ -101,10 +101,10 @@ def augment_image_and_labels(image_path, label_path, output_image_path, output_l
 
 
 # Veri setini işle
-input_image_dir = "drone_dataset_yolo/dataset_txt/images/train/"
-input_label_dir = "drone_dataset_yolo/dataset_txt/labels/train/"
-output_image_dir = "drone_dataset_yolo/dataset_txt/images/train_augmented/"
-output_label_dir = "drone_dataset_yolo/dataset_txt/labels/train_augmented/"
+input_image_dir = "../drone_dataset_yolo/dataset_txt/images/train/"
+input_label_dir = "../drone_dataset_yolo/dataset_txt/labels/train/"
+output_image_dir = "../drone_dataset_yolo/dataset_txt/images/train_augmented/"
+output_label_dir = "../drone_dataset_yolo/dataset_txt/labels/train_augmented/"
 
 os.makedirs(output_image_dir, exist_ok=True)
 os.makedirs(output_label_dir, exist_ok=True)

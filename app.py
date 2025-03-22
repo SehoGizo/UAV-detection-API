@@ -9,7 +9,7 @@ import os
 app = FastAPI()
 
 # Modeli yükle
-model = YOLO("runs/detect/train10/weights/best.pt")
+model = YOLO("../runs/detect/train10/weights/best.pt")
 
 
 @app.post("/predict")
@@ -46,4 +46,4 @@ async def predict(file: UploadFile = File(...)):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
